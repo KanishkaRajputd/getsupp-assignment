@@ -40,7 +40,7 @@ const [prevpage,setPrevpage]=useState(1);
   if (searchInput.length !== 0 && prevpage==page) {
       handleGetData(data.results);
     
-    }else  if(searchInput.length !== 0 && prevpage!=page){
+    }  if(searchInput.length !== 0 && prevpage!=page){
     
       handleGetData([...Data, ...data.results]);
       setPrevpage(page);
