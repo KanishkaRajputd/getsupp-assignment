@@ -36,13 +36,13 @@ export const UserCard=()=>{
       if(data.results==undefined){
         return;
       }
+   if (page !== prevpage) {
+      handleGetData([...Data, ...data.results]);
+      setPrevpage(prevpage);
+    }
     if (searchInput.length !== 0) {
       handleGetData(data.results);
-    } else {
-    
-      console.log(data.results)
-      handleGetData([...Data, ...data.results]);
-    }
+    } 
     
 //       handleGetData([...Data,...data.results]);
     
