@@ -13,6 +13,7 @@ export const UserCard=()=>{
   const { open, handleClose, handleOpen } = useContext(DetailPopContext);
   const { searchInput } = useContext(SearchInputContext);
 
+const [prevpage,setPrevpage]=useState(1);
 
 
   useEffect(() => {
@@ -36,12 +37,13 @@ export const UserCard=()=>{
       if(data.results==undefined){
         return;
       }
-  if (searchInput.length !== 0) {
+  if (searchInput.length !== 0 && prevpage==page) {
       handleGetData(data.results);
-    } else {
+    }else {
     
       console.log(data.results)
       handleGetData([...Data, ...data.results]);
+      setPrevpage(page);
    
     }
     
