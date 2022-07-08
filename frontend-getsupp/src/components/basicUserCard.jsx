@@ -36,7 +36,15 @@ export const UserCard=()=>{
       if(data.results==undefined){
         return;
       }
-      handleGetData([...Data,...data.results]);
+    if (searchInput.length !== 0) {
+      handleGetData(data.results);
+    } else {
+    
+      console.log(data.results)
+      handleGetData([...Data, ...data.results]);
+    }
+    
+//       handleGetData([...Data,...data.results]);
     
   }
   function scrollToend(){
