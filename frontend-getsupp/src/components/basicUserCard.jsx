@@ -39,14 +39,13 @@ const [prevpage,setPrevpage]=useState(1);
       }
   if (searchInput.length !== 0 ) {
       handleGetData(data.results);
-    console.log(prevpage,page)
-    console.log(searchInput.length);
+
     
-    }  if(  prevpage!=page){
+    }  else {
     
       handleGetData([...Data, ...data.results]);
       setPrevpage(page);
-      console.log(prevpage,page)
+   
    
     }
     
