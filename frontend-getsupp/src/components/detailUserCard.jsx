@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import { DetailPopContext } from "../contexts/detailOpen-closeContext";
 export const DetailsCard = () => {
     const { DetailData } = useContext(SetDetailContext);
-    console.log(DetailData);
+//     console.log(DetailData);
      const style = {
   position: 'absolute',
   top: '50%',
