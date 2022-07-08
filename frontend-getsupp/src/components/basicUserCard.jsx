@@ -39,10 +39,9 @@ const [prevpage,setPrevpage]=useState(1);
       }
   if (searchInput.length !== 0 && prevpage==page) {
       handleGetData(data.results);
-      console.log(prevpage,page);
+    
     }else  if(searchInput.length !== 0 && prevpage!=page){
-    console.log(prevpage,page);
-      console.log(data.results)
+    
       handleGetData([...Data, ...data.results]);
       setPrevpage(page);
    
@@ -50,7 +49,7 @@ const [prevpage,setPrevpage]=useState(1);
     
   }
   function scrollToend(){
-    console.log(page);
+  
          setPage(page+1);
          
      }
