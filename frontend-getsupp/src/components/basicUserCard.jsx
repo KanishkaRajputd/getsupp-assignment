@@ -40,8 +40,9 @@ const [prevpage,setPrevpage]=useState(1);
   if (searchInput.length !== 0 && prevpage==page) {
       handleGetData(data.results);
     console.log(prevpage,page)
+    console.log(searchInput.length);
     
-    }  if( prevpage!=page){
+    }  if(  prevpage!=page){
     
       handleGetData([...Data, ...data.results]);
       setPrevpage(page);
